@@ -3,76 +3,79 @@ import React, {
 } from 'react'
 import ReactDOM from 'react-dom'
 import Slider from 'react-slick'
+import NextArrow from './components/NextArrow'
+import PrevArrow from './components/PrevArrow'
+import cards from './constant'
 import 'slick-carousel/slick/slick.css'
 
 import { Header, GlobalStyle, Wrapper, Main, Section, Button} from './styled.js'
 
-function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, display: "block"}}
-        onClick={onClick}
-      />
-    );
-}
+// function SampleNextArrow(props) {
+//     const { className, style, onClick } = props;
+//     return (
+//       <div
+//         className={className}
+//         style={{ ...style, display: "block"}}
+//         onClick={onClick}
+//       />
+//     );
+// }
   
-function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, display: "block"}}
-        onClick={onClick}
-      />
-    );
-}
+// function SamplePrevArrow(props) {
+//     const { className, style, onClick } = props;
+//     return (
+//       <div
+//         className={className}
+//         style={{ ...style, display: "block"}}
+//         onClick={onClick}
+//       />
+//     );
+// }
 
-const cards = [
-    {
-        status: 'disabled',
-        imgUrl: 'assets/icon-iphone.png',
-        disabledImgUrl: 'assets/icon-iphone-disable.png',
-        title: '1綁定手機號',
-        text: '忘記密碼、轉賬驗証讓您的賬戶更安全'
-    },
-    {
-        status: '',
-        imgUrl: 'assets/icon-mail.png',
-        disabledImgUrl: 'assets/icon-mail-disable.png',
-        title: '2綁定郵箱',
-        text: '密碼找回不可少'
-    },
-    {
-        status: 'done',
-        imgUrl: 'assets/icon-qq.png',
-        disabledImgUrl: 'assets/icon-qq-disable.png',
-        title: '3綁定 QQ',
-        text: '活動優惠信息不漏接'
-    },
-    {
-        status: 'disabled',
-        imgUrl: 'assets/icon-moneybox.png',
-        disabledImgUrl: 'assets/icon-moneybox-disable.png',
-        title: '4首次充值',
-        text: '充值秒速到賬提現3分鐘搞定'
-    },
-    {
-        status: 'done',
-        imgUrl: 'assets/icon-wechat.png',
-        disabledImgUrl: 'assets/icon-wechat-disable.png',
-        title: '5綁定微信',
-        text: '活動優惠信息不漏接'
-    },
-    {
-        status: 'disabled',
-        imgUrl: 'assets/icon-betting.png',
-        disabledImgUrl: 'assets/icon-betting-disable.png',
-        title: '6首次投注',
-        text: '各種彩種應有盡有快來試試手氣！'
-    }
-]
+// const cards = [
+//     {
+//         status: 'disabled',
+//         imgUrl: 'assets/icon-iphone.png',
+//         disabledImgUrl: 'assets/icon-iphone-disable.png',
+//         title: '1綁定手機號',
+//         text: '忘記密碼、轉賬驗証讓您的賬戶更安全'
+//     },
+//     {
+//         status: '',
+//         imgUrl: 'assets/icon-mail.png',
+//         disabledImgUrl: 'assets/icon-mail-disable.png',
+//         title: '2綁定郵箱',
+//         text: '密碼找回不可少'
+//     },
+//     {
+//         status: 'done',
+//         imgUrl: 'assets/icon-qq.png',
+//         disabledImgUrl: 'assets/icon-qq-disable.png',
+//         title: '3綁定 QQ',
+//         text: '活動優惠信息不漏接'
+//     },
+//     {
+//         status: 'disabled',
+//         imgUrl: 'assets/icon-moneybox.png',
+//         disabledImgUrl: 'assets/icon-moneybox-disable.png',
+//         title: '4首次充值',
+//         text: '充值秒速到賬提現3分鐘搞定'
+//     },
+//     {
+//         status: 'done',
+//         imgUrl: 'assets/icon-wechat.png',
+//         disabledImgUrl: 'assets/icon-wechat-disable.png',
+//         title: '5綁定微信',
+//         text: '活動優惠信息不漏接'
+//     },
+//     {
+//         status: 'disabled',
+//         imgUrl: 'assets/icon-betting.png',
+//         disabledImgUrl: 'assets/icon-betting-disable.png',
+//         title: '6首次投注',
+//         text: '各種彩種應有盡有快來試試手氣！'
+//     }
+// ]
 
 const defaultSettings = {
     dots: false,
@@ -80,8 +83,8 @@ const defaultSettings = {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 4,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     responsive: [
         {
             breakpoint: 991,
